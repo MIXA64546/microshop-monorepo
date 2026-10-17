@@ -7,7 +7,7 @@ def client():
     with app.test_client() as client:
         yield client
 
-def test_get_products(client)
+def test_get_products(client):
     """Проверка, что эндпоинт /products возвращает JSON"""
     rv = client.get('/products')
     assert rv.status_code == 200
